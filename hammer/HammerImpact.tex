@@ -1,0 +1,111 @@
+\documentclass[11pt,a4paper]{article}
+
+\title{Hammer Hit}
+\author{Peter Borenstein}
+\date{2018 July}
+
+\begin{document}
+\maketitle
+A hammer works by storing energy which is transferred to the target in a collision.
+The target could be a nail or demolitioning concrete.
+Three ways of viewing the energy of a hammer come to mind;
+the hammer has speed when the target is hit,
+you put work into the hammer when swinging,
+and you put work into the hammer when raising it over your head.
+
+Viewing the hammer from different perspectives should come to the same conclusion on how hard the hammer hits.
+Using different equations should give the same result.
+Energy is not created or destroyed, so all the effort you put into the hammer will exist at the collision.
+
+To keep the math simple, let's assume the hammer weighs \textbf{5 kilograms} (11lbs), we lift the hammer \textbf{3 meters} up, the hammer pauses at its peak, and our muscles consistently push down on the hammer with \textbf{100 Newtons} (the force required to hold up 22 lbs).
+These three factors give much to ponder.
+The math gets complicated when you consider technique and swinging in an arch, so lets not go into that\ldots
+
+To understand and to be understood, we need to use standard units for common equations.
+Table \ref{tab:units} gives units and abbreviations used.
+
+\begin{table}
+\noindent\begin{tabular}{l | c | l | c}
+Thing&symbol&unit&abbreviation\\
+\hline
+force&F&newtons&$N$\\
+distance&d&meters&$m$\\
+height&h&meters&$m$\\
+mass (weight)&m&kilograms&$kg$\\
+time&t&seconds&$s$\\
+energy&E&joules&$J$\\
+speed&v&meters per second&$m/s$\\
+acceleration&a&meters per second squared&$m/s^2$\\
+gravity of Earth&g&meters per second squared&$m/s^2$\\
+\end{tabular}
+\label{tab:units}
+\caption{Units}
+\end{table}
+\pagebreak
+
+First, let's consider the total effort you put into pushing a hammer down.
+The work you do is the force applied multiplied by distance traveled. $$Work = F*d$$
+Interestingly, this does not consider the weight of the hammer! We have: $$100N*3m = \mathbf{300J}$$
+
+Second, let's consider the speed the hammer is traveling when it hits the target. The energy of a moving object is half the mass multiplied by the speed squared. $$E_k= 1/2mv^2$$
+
+We must determine the hammer's speed at impact, $v$.
+Motion and position equations are so common that they are given a special name, the Kinematic Equations. The one we need here is
+$$v=at+vi$$
+In our situation, the hammer is breifly still before it is pushed down. The initial speed, $vi$, is zero; ($v = at + 0$).
+The speed increases by acceleration over time.
+
+The time, $t$, is the difference between when we start pushing the hammer down and when the hammer hits.
+We need another Kinematic Equation.
+$$d = vi*t + 1/2at^2$$
+The distance, $d$, traveled is 3m. Rearranged to find time without a $vi$,
+$$t = \sqrt{2*\frac{d}{a}}$$
+
+We must determine the acceleration, $a$. Issac Newton told us $F=ma$. Rearranged, acceleration is determined by our force divided by the hammer's weight:
+$$a=F/m$$
+\pagebreak
+
+Finally, with no more mystery letters, we can solve the chain of equations based on the original three conditions.
+$$a = 100N/5kg = 20m/s^2$$
+$$t=\sqrt{2*\frac{3m}{20m/s^2}}= 0.55s$$
+$$v = 0.55s * 20m/s^2= 11m/s$$
+$$E_k=\frac{1}{2}*5kg*(11m/s)^2\approx\mathbf{300J}$$
+
+Voila! Considering speed and work both result in the hammer hitting with \textbf{300J} of energy.
+If you punched the second equation into your calculator, you would actually get 302J because the previous numbers are rounded.
+\pagebreak
+
+So far, we have neglected gravity. Gravity pulls all objects down at about $9.8m/s^2$.
+Air resistance will slow down light objects, but not the hammer.
+
+The work we did lifting up our hammer gives it potential energy.
+Energy in motion is kenetic. These energies are represented $E_p$ and $E_p$ respectively.
+Potiential energy would be see if we let the hammer fall without pushing it at all.
+
+Potential energy is given by the equation: $$E_p=mgh$$
+In our situation, we have $E_p=5kg*9.8m/s^2*3m=\mathbf{147J}$
+
+To prove we will get this same energy from speed by letting go of the hammer, we can solve the speed equations again with only gravity:
+$$a=g=9.8m/s^2$$
+$$t=\sqrt{2*\frac{3m}{9.8m/s^2}}= 0.782s$$
+$$v = 0.782s * 9.8m/s^2= 7.7m/s$$
+$$E_k=\frac{1}{2}*5kg*(7.7m/s)^2\approx\mathbf{147J}$$
+
+We can verify the energy a third time by calculating the work done by gravity:
+$$F=ma=5kg*9.8m/s^2 = 49N$$
+$$Work = F*d = 49N*3m = \mathbf{147J}$$
+
+We get the same answer from considering the energy in a hammer's impact from 3 perspectives.
+
+Our work and the work from gravity adds together because we are pushing down. Forces in the same direction add togther.
+The numbers should show the total energy is $300J + 147J = \mathbf{447J}$.
+$$F =  100N + 49N = 149N$$
+$$a = F/m = 149N/5kg = 29.8m/s^2$$
+$$t=\sqrt{2*\frac{3m}{29.8m/s^2}}= 0.45s$$
+$$v = 0.45s * 29.8m/s^2= 13.4m/s$$
+$$E_k=\frac{1}{2}*5kg*(13.4m/s)^2\approx\mathbf{447J}$$
+
+Knowing why the hammer works does not make swinging it any easier...
+
+\end{document}
+
